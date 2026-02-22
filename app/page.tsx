@@ -1,15 +1,20 @@
-import prisma from "@/lib/prisma";
+import { getServerSession } from "@/lib/session";
+import { redirect } from "next/navigation";
 
 export default async function Home() {
-  const users = await prisma.user.findMany()
+  const session = await getServerSession()
+
+  if (!session) {
+    redirect("/sign-up")
+  }
+
   return (
-   <div>
-    <div className="flex justify-center items-center h-screen">
-      <div>
-        <button>clcik me</button>
-        {JSON.stringify(users)}       
+    <div>
+      <div className="flex justify-center items-center h-screen">
+        <div>
+          HomePage
+        </div>
       </div>
-    </div>   
-   </div>
+    </div>
   );
 }
