@@ -42,7 +42,7 @@ const SignUp = () => {
 		}
 	};
 	return (
-		<div>
+		<div className="w-full max-w-md">
 			<Card className="z-50 rounded-md rounded-t-none max-w-md">
 				<CardHeader>
 					<CardTitle className="text-lg md:text-xl">Sign Up</CardTitle>

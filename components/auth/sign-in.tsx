@@ -19,7 +19,7 @@ const SignIn = () => {
 	const [rememberMe, setRememberMe] = useState(false);
 
 	return (
-		<div>
+		<div className="w-full max-w-md">
 			<Card className="max-w-md">
 				<CardHeader>
 					<CardTitle className="text-lg md:text-xl">Sign In</CardTitle>

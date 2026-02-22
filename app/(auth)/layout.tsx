@@ -9,9 +9,9 @@ const AuthLayout = async ({ children }: Readonly<{ children: React.ReactNode }>)
         redirect("/")
     }
     return (
-        <>
+        <div className="flex min-h-screen items-center justify-center p-4">
             {children}
-        </>
+        </div>
 
     )
 }
